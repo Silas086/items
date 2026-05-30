@@ -1,0 +1,74 @@
+# ===== 依赖 / 构建产物 =====
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+build/
+.cache/
+
+# ===== 嵌套的第三方 Git 仓库（FunASR，避免“仓库套仓库”变空壳） =====
+funasr/
+
+# ===== Python 虚拟环境 / 缓存 =====
+ai-env/
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ===== AI 模型权重（体积大，不该进 Git） =====
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.bin
+*.safetensors
+*.h5
+*.pb
+*.tflite
+*.model
+*.npz
+models/
+checkpoints/
+pretrained/
+
+# ===== Java / Maven / Gradle =====
+target/
+**/target/
+.gradle/
+*.class
+*.war
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# ===== 上传 / 临时文件 / 日志 =====
+uploads/
+tmp/
+temp/
+logs/
+*.log
+
+# ===== 密钥 / 环境变量（绝不上传） =====
+.env
+.env.*
+*.local
+application-local.*
+application-secret.*
+*.pem
+*.key
+credentials.json
+
+# ===== 编辑器 / 系统 =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.iml
+
+# ===== 本地预览工具配置（Claude Code 用，与项目无关） =====
+.claude/

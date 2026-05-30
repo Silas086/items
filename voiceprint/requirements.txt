@@ -1,0 +1,24 @@
+# Voiceprint 声纹识别服务依赖清单
+# 使用虚拟环境 Python 3.12（ai-env）
+# 安装命令：
+# pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com
+
+# Web 框架
+fastapi
+uvicorn
+python-multipart
+
+# 音频处理
+librosa
+soundfile
+
+# AI 模型
+modelscope
+torch
+torchaudio
+
+# modelscope 依赖
+addict
+datasets
+simplejson
+sortedcontainers
