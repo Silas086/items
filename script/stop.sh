@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # 停止所有语音工厂服务
-ROOT="$(cd "$(dirname "$0")" && pwd)"
+ROOT="/Users/skyler/Desktop/voice-deploy-package"
 LOG="$ROOT/logs"
 
 for s in frontend voiceprint tts funasr backend minio; do
@@ -11,7 +11,6 @@ for s in frontend voiceprint tts funasr backend minio; do
   fi
 done
 
-# 兜底：mvn/pnpm 会 fork 子进程，按端口再清一遍
 for port in 8081 8080 8004 8003 8002 9000; do
   lsof -ti:$port 2>/dev/null | xargs kill -9 2>/dev/null
 done
