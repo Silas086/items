@@ -3,7 +3,7 @@ spring:
     name: springboot-minio
 
   datasource:
-    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/minio?characterEncoding=UTF-8&useSSL=false}
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/minio?characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true}
     username: ${MYSQL_USERNAME:root}
     password: ${MYSQL_PASSWORD:12345678}
     driver-class-name: ${MYSQL_DRIVER:com.mysql.cj.jdbc.Driver}
