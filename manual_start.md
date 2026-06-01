@@ -34,9 +34,6 @@ source /Users/skyler/Desktop/voice-deploy-package/ai-env/bin/activate
 cd /Users/skyler/Desktop/voice-deploy-package/voiceprint
 python sc_server.py
 
-用pipreqs可以识别py文件所需依赖
-pip install pipreqs -i https://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com
-对所需识别文件进行扫描: pipreqs aaaaa(准确路径) --force
 
 
 全部启动完后访问 http://localhost:8081 

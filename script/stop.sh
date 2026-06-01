@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
-# 停止所有语音工厂服务
-ROOT="/Users/skyler/Desktop/voice-deploy-package"
+# 停止所有语音工厂服务（可移植版：自动探测项目根）
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+find_root() {
+  local d="$SCRIPT_DIR"
+  while [ "$d" != "/" ]; do
+    [ -d "$d/backend" ] && [ -d "$d/frontend" ] && { echo "$d"; return; }
+    d="$(dirname "$d")"
+  done
+}
+ROOT="$(find_root)"
 LOG="$ROOT/logs"
 
 for s in frontend voiceprint tts funasr backend minio; do
